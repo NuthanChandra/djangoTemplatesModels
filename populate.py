@@ -13,6 +13,7 @@ fake = Faker()
 for i in range(10):
     fname, lname = fake.name().split()
     mail = fake.free_email()
+    # Author used user = User.objects.get_or_create(first_name=f_name, last_name=lname, email=mail)[0]  
     user = User(
         first_name=fname,
         last_name=lname,
