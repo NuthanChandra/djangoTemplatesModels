@@ -14,8 +14,5 @@ def users(request):
     # The author used user_list = User.objects.order_by('first_name')
     # Followed by user_dict = {'users': user_list}
     users = User.objects.all()
-    user_email = []
-    for user in users:
-        user_email.append({'first_name': user.first_name, 'email': user.email})
-    user_dict = {'user_email': user_email}
+    user_dict = {'users': users}
     return render(request, "second_app/users.html", context= user_dict)
