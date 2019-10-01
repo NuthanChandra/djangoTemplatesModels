@@ -28,4 +28,5 @@ def user_form(request):
             user_data.last_name = form.cleaned_data['last_name']
             user_data.email = form.cleaned_data['email']
             user_data.save()
+            return index(request)
     return render(request, 'second_app/user_form.html', {'form': form})
