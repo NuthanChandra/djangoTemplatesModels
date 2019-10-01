@@ -21,4 +21,5 @@ urlpatterns = [
     path('', views.index),
     path('users/',include('second_app.urls')),
     path('admin/', admin.site.urls),
+    path('formpage/', views.user_form, name='form_name'),
 ]
