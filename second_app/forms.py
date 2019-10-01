@@ -6,7 +6,7 @@ class UserForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField(max_length=32, widget=forms.PasswordInput)
     
-class ModelForm(forms.ModelForm):
-    class Meta:
+class NewUserForm(forms.ModelForm): 
+    class Meta():
         model = User
-        fields = ['first_name', 'last_name', 'email']
+        fields = '__all__'
